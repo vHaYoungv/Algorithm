@@ -18,7 +18,7 @@ def solution(progresses, speeds):
     return ret + [i]
 
 # 참고 풀이
-# zip을 이용해서, p와 s를 간단하게 표현
+# zip을 이용해서, p와 s를 간단하게 표현.
 def solution(progresses, speeds):
     Q=[]
     for p, s in zip(progresses, speeds):

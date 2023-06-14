@@ -24,5 +24,3 @@ def solution(jobs):
             current_time += 1
 
     return total // job_length
-
-[참고 풀이]

@@ -1,6 +1,6 @@
 [내 풀이]
 # 최솟값이 계속 변화하고, 그것을 기준으로 알고리즘이 돌아가야함 => heapq 사용
-# 런타임 에러: 아예 불가능한 경우 return -1 를 고려하지 않음.
+# 런타임 에러: 아예 불가능한 경우 return -1 를 고려하지 않음
 
 import heapq as hq
 def solution(scoville, K):

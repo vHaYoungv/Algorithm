@@ -1,5 +1,6 @@
 [내 풀이]
 from collections import deque as dq
+
 import heapq as hq
 
 def solution(jobs):

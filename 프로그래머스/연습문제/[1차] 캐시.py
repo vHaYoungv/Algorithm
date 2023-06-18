@@ -18,7 +18,7 @@ def solution(cacheSize, cities):
     return time
 
 [참고 풀이]
-# deque에 maxlen을 지정할 수 있다. 용량 초과하면 가장 옛날 것부터 popleft() 된다.
+# deque에 maxlen을 지정할 수 있다. 용량을 초과하면 가장 옛날 것부터 popleft() 된다.
 # deque에서도 remove가 된다.
 def solution(cacheSize, cities):
     import collections

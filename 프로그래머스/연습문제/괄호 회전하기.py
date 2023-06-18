@@ -1,5 +1,5 @@
 [내 풀이]
-# 내 풀이는 오류가 발생할 경우 바로 False를 리턴해서 더 빠를 듯 하다.
+# 내 풀이가 오류가 발생할 경우 바로 False를 리턴해서 더 빠르긴 할 듯 하다.
 from collections import deque
 def check(s):
     stk = []
@@ -31,7 +31,7 @@ def solution(s):
     return ans
 
 [참고 풀이]
-# is_valid() 라는 네이밍 센스
+# is_valid() 네이밍 센스
 def is_valid(s):
     stack = []
     for ch in s:

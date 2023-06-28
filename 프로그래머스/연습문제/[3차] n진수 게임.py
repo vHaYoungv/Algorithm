@@ -29,7 +29,7 @@ def tenToN(x, n):
     return str[::-1]
 
 def solution(n, t, m, p):
-    numbers = '' #굳이 리스트로 값을 받을 필요가 없었다. 리턴 값도 문자열이고, 슬라이싱 이용할 수 있는 건 같기 때문이다.
+    numbers = '' #굳이 리스트로 값을 받을 필요가 없었다. 리턴 값도 문자열이고, 슬라이싱 이용할 수 있는 건 같기 때문이
     num = 0
     while len(numbers)<t*m:
         numbers+=tenToN(num, n)

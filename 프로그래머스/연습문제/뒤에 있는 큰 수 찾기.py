@@ -22,7 +22,6 @@ def solution(numbers):
     return answer
 
 [내 풀이2]
-- 정보처리기사 시험 보고 나서 갑자기 스택에 눈이 떠진건가(?) 갑자기 아주 간단하게 풀렸다.
 - 정석 풀이랑 점점 내 코드가 비슷해지는 것 같아 뿌듯하다...
 def solution(numbers):
     answer = [-1] * (len(numbers))

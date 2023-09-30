@@ -15,7 +15,7 @@ def solution(priorities, location):
                 return cnt
 
 # 참고풀이
-# cur[1] 은 상수고, q[1] for q in queue 는 literable 인데도 any( )로 비교가 된다. (굳이 나 처럼 자료형 맞출 필요가 없었다.)
+# cur[1] < q[1] for q in queue 자체가 리스트로 취급되나보다.
 def solution(priorities, location):
     queue =  [(i,p) for i,p in enumerate(priorities)]
     answer = 0

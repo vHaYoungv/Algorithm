@@ -18,6 +18,37 @@ def solution(jobs):
             hq.heappush(Q, jobsSorted.popleft())
     return tT//len(jobs)
 
+[내 풀이2]
+# 3:07 ~ 4:00 // 오래 걸렸다... 11,17,20 빼고 실패
+import heapq as hq
+
+
+def solution(jobs):
+    # 걸린 시간을 최소로 하려면, 당장 실행 가능한 프로그램들 중에서 제일 짧은 프로그램을 먼저 처리하면 된다.
+    length = len(jobs)
+    currentTime = jobs[0][0]
+    totalTime = 0
+    heap = []
+    hq.heappush(heap, (jobs[0][1], jobs[0][0]))
+    jobs.pop(0)
+    while heap:
+        # 힙에 넣어진 작업을 하나 수행
+        pT, gT = hq.heappop(heap)
+
+        # 현재 시간과 totalTime 다시 계산
+        totalTime += pT + (currentTime - gT)
+        currentTime += pT
+
+        # 만약 힙이 비어있어서, 멈추게 되는 경우 다음 작업의 getTime 까지 이동
+        if not heap and jobs and currentTime < jobs[0][0]:
+            currentTime = jobs[0][0]
+
+        # 현재 시간보다 더 이른 getTime을 가진 job들은 모두 힙에 넣기
+        while jobs and jobs[0][0] <= currentTime:
+            getTime, playTime = jobs.pop(0)
+            hq.heappush(heap, (playTime, getTime))
+    return (totalTime) // length
+
 [참고 풀이]
 import heapq
 from collections import deque
